@@ -58,3 +58,21 @@ result
 xmldataframe <- xmlToDataFrame(result)
 xmldataframe
 
+# Inputting through the keyboard
+
+readData <- function () {
+  df <- data.frame (Month = c (), Year = c (), Value = c ())
+  while (TRUE) {
+    my.year <- readline (prompt="Year: ")
+    # stop reading if no year was typed in
+    if (my.year == '') break
+    my.month <- as.integer (readline (prompt="Month: "))
+    my.val <- as.integer (readline (prompt="Value: "))
+    # add the read data to the bottom of the dataframe
+    df <- rbind (df, data.frame (Month = c (my.month), Year = c (my.year), Value = c (my.val)))
+  }
+  df
+}
+# now call the function, it will allow inputs until an empty year is typed
+readData ()
+
