@@ -1,0 +1,10 @@
+Exp- 2. Demonstrate pre-visualization of data set applied for Analysis 
+Aim: Visualize the pre-processed data sets using different graphs and understanding 
+their application in data analysis.
+Basic Visualization of data
+1. Histogram
+2. Bar Chart
+3. Line Chart
+4. Pie Chart
+5. Box plot
+6. Scatter plot
