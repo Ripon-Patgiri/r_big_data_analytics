@@ -1,0 +1,18 @@
+Exp-1. Demonstrate Import and export of data sets in different formats using R.
+Aim: To read the data set from the different file formats
+Steps
+1. Read data as csv form using read.csv function
+2. Read data as txt form using read.table function
+3. Read data as xlsx form using read.xlsx function
+Local Column Delimited Files (.csv)
+Step1 : Assign file path to the object
+Step2: Read the file using read.csv() function and assign the result to one object
+Step3: read the resultant object.
+Text File From the Internet
+Step1 : Assign URL path to the object
+Step2 : Read the URL path using read.csv() function
+Files From Other Software ( MS Excel Sheet)
+Step1 :Install XLConnect package
+Step2 : Assign file path to the object
+Step3 : load workbook using loadWorkbook() function
+Step4: Read work sheet using readWorksheet() function
