@@ -1,0 +1,11 @@
+Principal Component Analysis (PCA) is a dimensionality reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set1. It works on the condition that while the data in a higher dimensional space is mapped to data in a lower dimension space, the variance of the data in the lower dimensional space should be maximum2.
+
+Here are the steps to perform PCA in R:
+
+Install and load the required packages
+Import and prepare your data
+Scale your data
+Calculate the covariance matrix
+Calculate eigenvectors and eigenvalues
+Choose principal components
+Project data onto new feature space
