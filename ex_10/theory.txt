@@ -1,0 +1,5 @@
+k-Means clustering is a partitioning method that divides a dataset into k clusters by minimizing the within-cluster sum of squares. The algorithm starts by randomly selecting k initial centroids and then iteratively assigns each data point to the nearest centroid and updates the centroid to be the mean of all points in the cluster. This process continues until the cluster assignments no longer change or a maximum number of iterations is reached.
+
+Hierarchical clustering is an agglomerative method that builds a hierarchy of clusters by iteratively merging the two closest clusters. The algorithm starts with each data point as its own cluster and then merges the two closest clusters based on a distance metric and linkage criterion. This process continues until all data points are merged into a single cluster. The result is a dendrogram that shows the hierarchical relationship between the clusters.
+
+Both k-Means and Hierarchical clustering are important in analytics because they allow us to identify patterns and groupings in data. This can be useful for tasks such as customer segmentation, anomaly detection, and data compression.
