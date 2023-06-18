@@ -61,3 +61,58 @@ df_log = log(df)
 plotNormalHistogram(df_log,
                     main = "After Log Transformation",
                     col = "pink")
+
+
+# ---------------------- 
+
+# Load the dataset from the web (URL of the dataset)
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+iris <- read.csv(url, header = FALSE)
+
+# Set column names
+colnames(iris) <- c("sepal_length", "sepal_width", "petal_length", "petal_width", "class")
+
+# Pre-visualization
+summary(iris)
+
+# Square root transformation
+iris$sqrt_sepal_width <- sqrt(iris$sepal_width)
+
+# Pre-visualization
+hist(iris$sqrt_sepal_width)
+
+# Cube root transformation
+iris$cbrt_petal_length <- sign(iris$petal_length) * abs(iris$petal_length)^(1/3)
+
+# Pre-visualization
+hist(iris$cbrt_petal_length)
+
+# Log transformation
+iris$log_sepal_length <- log(iris$sepal_length)
+
+# Pre-visualization
+hist(iris$log_sepal_length)
+
+# Min-max normalization
+iris$minmax_petal_width <- (iris$petal_width - min(iris$petal_width)) / (max(iris$petal_width) - min(iris$petal_width))
+
+# Pre-visualization
+hist(iris$minmax_petal_width)
+
+# Z-score normalization
+iris$zscore_sepal_width <- scale(iris$sepal_width)
+
+# Pre-visualization
+hist(iris$zscore_sepal_width)
+
+# Z-score normalization
+iris$zscore_sepal_width <- scale(iris$sepal_width)
+
+# Pre-visualization
+hist(iris$zscore_sepal_width)
+
+# Post-visualization
+par(mfrow = c(1, 2))
+hist(iris$sepal_width, main = "Original sepal_width")
+hist(iris$sqrt_sepal_width, main = "Square Root Transformation of sepal_width")
+
