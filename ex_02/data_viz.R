@@ -44,3 +44,39 @@ plot(mtcars$wt,
      xlab = "Weight (1000 lbs)",
      ylab = "Miles per Gallon",
      col = mtcars$cyl)
+
+# ----------------------------
+
+# Using built-in data set
+data(mtcars)
+hist(mtcars$mpg)
+
+# Importing a CSV file from Datablist
+myurl <- "https://www.datablist.com/learn/csv/download-sample-csv-files"
+mydata <- read.csv(text = getURL(myurl))
+
+# Visualizing external data
+hist(mydata$column_name)
+
+
+# Importing a CSV file from Datablist
+myurl <- "https://www.datablist.com/learn/csv/download-sample-csv-files"
+mydata <- read.csv(text = getURL(myurl))
+
+# Histogram
+hist(mydata$column_name)
+
+# Bar chart
+counts <- table(mydata$column_name)
+barplot(counts)
+
+# Box plot
+boxplot(column1 ~ column2, data = mydata)
+
+# Pie chart
+slices <- c(10, 12, 4, 16, 8)
+lbls <- c("US", "UK", "Australia", "Germany", "France")
+pie(slices, labels = lbls)
+
+# Scatter plot
+plot(mydata$column1, mydata$column2)
