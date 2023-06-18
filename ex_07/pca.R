@@ -47,3 +47,30 @@ fviz_cos2(data.pca, choice = "var", axes = 1:2)
 fviz_pca_var(data.pca, col.var = "cos2",
              gradient.cols = c("black", "orange", "green"),
              repel = TRUE)
+
+# ------------------- 
+
+# Load the dataset
+data("USArrests")
+
+# Perform necessary preprocessing (scaling variables)
+scaled_data <- scale(USArrests)
+
+# Perform PCA
+pca_result <- prcomp(scaled_data)
+
+# Extract the principal components and their variance explained
+pcs <- pca_result$x  # Principal Components (scores)
+var_explained <- pca_result$sdev^2 / sum(pca_result$sdev^2)  # Variance explained by each PC
+
+# Visualize the Results
+
+# Scree Plot
+plot(1:length(var_explained), var_explained, type = "b", xlab = "Principal Component", ylab = "Variance Explained",
+     main = "Scree Plot")
+
+# Biplot
+biplot(pca_result, scale = 0)
+
+# Additional visualizations or analyses as per your requirements
+
