@@ -76,3 +76,25 @@ readData <- function () {
 # now call the function, it will allow inputs until an empty year is typed
 readData ()
 
+# ------------------
+
+
+# Importing a CSV file from Datablist
+myurl <- "https://www.datablist.com/learn/csv/download-sample-csv-files"
+mydata <- read.csv(text = getURL(myurl))
+
+# Exporting a data frame to a CSV file
+write.csv(mydata, "mydata_export.csv")
+
+# Importing a text file from the internet
+myurl <- "http://www.example.com/mydata.txt"
+mydata <- read.table(text = getURL(myurl))
+
+# Importing an Excel file
+library(readxl)
+mydata <- read_excel("mydata.xlsx")
+
+# Exporting a data frame to an Excel file
+library(writexl)
+write_xlsx(mydata, "mydata_export.xlsx")
+
